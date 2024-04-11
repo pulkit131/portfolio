@@ -273,7 +273,7 @@ body {
   margin-bottom: 100px;
   margin-right: 200px;
   background: transparent;
-
+  
 }
 
 .container {
@@ -335,16 +335,15 @@ body {
 .description h4 {
   text-transform: uppercase;
 }
-
-input {
-  display: none;
+.wrapper input{
+  display:  none;
 }
 
-input:checked+label {
+.wrapper input:hover + label {
   width: 600px
 }
 
-input:checked+label.description {
+.wrapper input:hover + label .description {
   opacity: 1 !important;
   transform: translateY(0) !important;
 }
@@ -430,6 +429,7 @@ span {
 .about-content p {
   font-size: 1.6rem;
   margin: 2rem 0 3rem;
+  max-width: 80vw;
 }
 
 .btn-box.btns {
@@ -452,7 +452,8 @@ span {
   display: flex;
   flex-wrap: wrap;
   gap: 5rem;
-
+  margin-right: 3rem;
+  margin-left: 3rem;
 }
 
 .skills-row .skills-column {
@@ -531,9 +532,26 @@ span {
   width: 67%;
 }
 
-.contactSection{
-  max-width: 80vw;
+
+/* Add styling for the submit button */
+.btn {
+  background-color: #ffc107;
+  color: #1e2167;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px; /* Add margin to separate button from the form-check */
 }
+
+.btn:hover {
+  background-color: #1e2167;
+  color: #ffc107;
+}
+
+
+
 .formContent {
   display: flex;
   flex-direction: column;
@@ -564,25 +582,18 @@ span {
 }
 
 .form-check {
-  display: flex;
-  flex-direction: row; /* Keep checkboxes in a row */
-  align-items: center; /* Align checkboxes vertically centered with text */
+  flex-direction: row;
 }
 
-/* Add styling for the submit button */
-.btn {
-  background-color: #ffc107;
-  color: #1e2167;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  margin-top: 10px; /* Add margin to separate button from the form-check */
+.contactForm {
+  max-width: 80vw;
+  height: 80vh;
+  margin: auto;
 }
 
-.btn:hover {
-  background-color: #1e2167;
-  color: #ffc107;
+.contactForm h1 {
+  color: white;
+  font-weight: bold;
+  font-size: 3rem;
 }
 
